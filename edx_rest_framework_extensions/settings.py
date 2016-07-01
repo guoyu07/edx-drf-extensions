@@ -47,6 +47,7 @@ def _get_current_jwt_issuers():
     Having this allows for easier testing/mocking
     """
     # If we have a 'JWT_ISSUERS' list defined, return it
+    logger.info(settings.JWT_AUTH)
     return settings.JWT_AUTH.get('JWT_ISSUERS', None)
 
 
